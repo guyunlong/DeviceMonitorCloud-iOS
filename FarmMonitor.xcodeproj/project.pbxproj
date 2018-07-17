@@ -1,0 +1,584 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		23CEBF63B320A887C96461E9 /* libPods-FarmMonitor.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4159328D397400E0E6066DB0 /* libPods-FarmMonitor.a */; };
+		A46CB61420D75512003F2572 /* BoxModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A46CB61320D75512003F2572 /* BoxModel.m */; };
+		A46CB61720D756EA003F2572 /* AccountManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A46CB61620D756EA003F2572 /* AccountManager.m */; };
+		A46CB61D20D75DAE003F2572 /* UIView+Common.m in Sources */ = {isa = PBXBuildFile; fileRef = A46CB61A20D75DAD003F2572 /* UIView+Common.m */; };
+		A46CB61E20D75DAE003F2572 /* NSString+Common.m in Sources */ = {isa = PBXBuildFile; fileRef = A46CB61B20D75DAE003F2572 /* NSString+Common.m */; };
+		A46CB62120D75FFC003F2572 /* UITableView+Common.m in Sources */ = {isa = PBXBuildFile; fileRef = A46CB62020D75FFB003F2572 /* UITableView+Common.m */; };
+		A46CB62420D7615D003F2572 /* UIViewController+HUD.m in Sources */ = {isa = PBXBuildFile; fileRef = A46CB62320D7615D003F2572 /* UIViewController+HUD.m */; };
+		A46CB62820D7625D003F2572 /* LoginViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A46CB62720D7625D003F2572 /* LoginViewModel.m */; };
+		A46CB62B20D7A5BF003F2572 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A46CB62D20D7A5BF003F2572 /* Localizable.strings */; };
+		A46CB63420D7AABF003F2572 /* UIColor+expanded.m in Sources */ = {isa = PBXBuildFile; fileRef = A46CB63320D7AABF003F2572 /* UIColor+expanded.m */; };
+		A47E71E520E9294600616474 /* PlayLiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A47E71E420E9294600616474 /* PlayLiveViewController.m */; };
+		A4B1EF2120FCCCD10039AA91 /* PlayLiveViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A4B1EF2020FCCCD10039AA91 /* PlayLiveViewModel.m */; };
+		A4F0171C20D6B38600C6295C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F0171B20D6B38600C6295C /* AppDelegate.m */; };
+		A4F0171F20D6B38600C6295C /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F0171E20D6B38600C6295C /* LoginViewController.m */; };
+		A4F0172220D6B38600C6295C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4F0172020D6B38600C6295C /* Main.storyboard */; };
+		A4F0172420D6B38700C6295C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4F0172320D6B38700C6295C /* Assets.xcassets */; };
+		A4F0172720D6B38700C6295C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4F0172520D6B38700C6295C /* LaunchScreen.storyboard */; };
+		A4F0172A20D6B38700C6295C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F0172920D6B38700C6295C /* main.m */; };
+		A4F0173920D6B5CA00C6295C /* FFHttpTool.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F0173320D6B5CA00C6295C /* FFHttpTool.m */; };
+		A4F0173A20D6B5CA00C6295C /* FarmGetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F0173420D6B5CA00C6295C /* FarmGetManager.m */; };
+		A4F0173E20D6B99200C6295C /* BoxListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F0173D20D6B99200C6295C /* BoxListViewController.m */; };
+		A4F0174320D6B9D100C6295C /* BoxCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F0174120D6B9D100C6295C /* BoxCell.m */; };
+		A4F0174420D6B9D100C6295C /* BoxCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4F0174220D6B9D100C6295C /* BoxCell.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		4159328D397400E0E6066DB0 /* libPods-FarmMonitor.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FarmMonitor.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F9BCBE0A4F453E53F66CA1B /* Pods-FarmMonitor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FarmMonitor.release.xcconfig"; path = "Pods/Target Support Files/Pods-FarmMonitor/Pods-FarmMonitor.release.xcconfig"; sourceTree = "<group>"; };
+		A1DDCA2D685F53673231DE1A /* Pods-FarmMonitor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FarmMonitor.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FarmMonitor/Pods-FarmMonitor.debug.xcconfig"; sourceTree = "<group>"; };
+		A46CB61220D75512003F2572 /* BoxModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BoxModel.h; sourceTree = "<group>"; };
+		A46CB61320D75512003F2572 /* BoxModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BoxModel.m; sourceTree = "<group>"; };
+		A46CB61520D756EA003F2572 /* AccountManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AccountManager.h; sourceTree = "<group>"; };
+		A46CB61620D756EA003F2572 /* AccountManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AccountManager.m; sourceTree = "<group>"; };
+		A46CB61920D75DAD003F2572 /* NSString+Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Common.h"; sourceTree = "<group>"; };
+		A46CB61A20D75DAD003F2572 /* UIView+Common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Common.m"; sourceTree = "<group>"; };
+		A46CB61B20D75DAE003F2572 /* NSString+Common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Common.m"; sourceTree = "<group>"; };
+		A46CB61C20D75DAE003F2572 /* UIView+Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Common.h"; sourceTree = "<group>"; };
+		A46CB61F20D75FFB003F2572 /* UITableView+Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+Common.h"; sourceTree = "<group>"; };
+		A46CB62020D75FFB003F2572 /* UITableView+Common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+Common.m"; sourceTree = "<group>"; };
+		A46CB62220D7615C003F2572 /* UIViewController+HUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+HUD.h"; sourceTree = "<group>"; };
+		A46CB62320D7615D003F2572 /* UIViewController+HUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+HUD.m"; sourceTree = "<group>"; };
+		A46CB62620D7625D003F2572 /* LoginViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewModel.h; sourceTree = "<group>"; };
+		A46CB62720D7625D003F2572 /* LoginViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewModel.m; sourceTree = "<group>"; };
+		A46CB62C20D7A5BF003F2572 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		A46CB63120D7A61C003F2572 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		A46CB63220D7AABF003F2572 /* UIColor+expanded.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+expanded.h"; sourceTree = "<group>"; };
+		A46CB63320D7AABF003F2572 /* UIColor+expanded.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+expanded.m"; sourceTree = "<group>"; };
+		A47E71E320E9294600616474 /* PlayLiveViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlayLiveViewController.h; sourceTree = "<group>"; };
+		A47E71E420E9294600616474 /* PlayLiveViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlayLiveViewController.m; sourceTree = "<group>"; };
+		A4B1EF1F20FCCCD10039AA91 /* PlayLiveViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlayLiveViewModel.h; sourceTree = "<group>"; };
+		A4B1EF2020FCCCD10039AA91 /* PlayLiveViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlayLiveViewModel.m; sourceTree = "<group>"; };
+		A4F0171720D6B38500C6295C /* FarmMonitor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FarmMonitor.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A4F0171A20D6B38600C6295C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		A4F0171B20D6B38600C6295C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		A4F0171D20D6B38600C6295C /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		A4F0171E20D6B38600C6295C /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		A4F0172120D6B38600C6295C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A4F0172320D6B38700C6295C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A4F0172620D6B38700C6295C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A4F0172820D6B38700C6295C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A4F0172920D6B38700C6295C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A4F0173320D6B5CA00C6295C /* FFHttpTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFHttpTool.m; sourceTree = "<group>"; };
+		A4F0173420D6B5CA00C6295C /* FarmGetManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FarmGetManager.m; sourceTree = "<group>"; };
+		A4F0173620D6B5CA00C6295C /* FFHttpTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFHttpTool.h; sourceTree = "<group>"; };
+		A4F0173720D6B5CA00C6295C /* FarmGetManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FarmGetManager.h; sourceTree = "<group>"; };
+		A4F0173C20D6B99200C6295C /* BoxListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BoxListViewController.h; sourceTree = "<group>"; };
+		A4F0173D20D6B99200C6295C /* BoxListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BoxListViewController.m; sourceTree = "<group>"; };
+		A4F0174020D6B9D100C6295C /* BoxCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BoxCell.h; sourceTree = "<group>"; };
+		A4F0174120D6B9D100C6295C /* BoxCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BoxCell.m; sourceTree = "<group>"; };
+		A4F0174220D6B9D100C6295C /* BoxCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BoxCell.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A4F0171420D6B38500C6295C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				23CEBF63B320A887C96461E9 /* libPods-FarmMonitor.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A46CB61820D75D3D003F2572 /* OC_Category */ = {
+			isa = PBXGroup;
+			children = (
+				A46CB63220D7AABF003F2572 /* UIColor+expanded.h */,
+				A46CB63320D7AABF003F2572 /* UIColor+expanded.m */,
+				A46CB62220D7615C003F2572 /* UIViewController+HUD.h */,
+				A46CB62320D7615D003F2572 /* UIViewController+HUD.m */,
+				A46CB61920D75DAD003F2572 /* NSString+Common.h */,
+				A46CB61B20D75DAE003F2572 /* NSString+Common.m */,
+				A46CB61C20D75DAE003F2572 /* UIView+Common.h */,
+				A46CB61A20D75DAD003F2572 /* UIView+Common.m */,
+				A46CB61F20D75FFB003F2572 /* UITableView+Common.h */,
+				A46CB62020D75FFB003F2572 /* UITableView+Common.m */,
+			);
+			path = OC_Category;
+			sourceTree = "<group>";
+		};
+		A46CB62520D76249003F2572 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				A46CB62620D7625D003F2572 /* LoginViewModel.h */,
+				A46CB62720D7625D003F2572 /* LoginViewModel.m */,
+				A4B1EF1F20FCCCD10039AA91 /* PlayLiveViewModel.h */,
+				A4B1EF2020FCCCD10039AA91 /* PlayLiveViewModel.m */,
+			);
+			name = ViewModel;
+			path = FarmMonitor/ViewModel;
+			sourceTree = "<group>";
+		};
+		A4F0170E20D6B38500C6295C = {
+			isa = PBXGroup;
+			children = (
+				A4F0173020D6B5CA00C6295C /* Utils */,
+				A46CB62D20D7A5BF003F2572 /* Localizable.strings */,
+				A46CB62520D76249003F2572 /* ViewModel */,
+				A4F0173F20D6B9B500C6295C /* View */,
+				A4F0173B20D6B70A00C6295C /* Model */,
+				A4F0171920D6B38500C6295C /* FarmMonitor */,
+				A4F0171820D6B38500C6295C /* Products */,
+				D29BFC3ADC7192F31B073022 /* Pods */,
+				DC4E80C9CE9F3789BAC25EB2 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		A4F0171820D6B38500C6295C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A4F0171720D6B38500C6295C /* FarmMonitor.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A4F0171920D6B38500C6295C /* FarmMonitor */ = {
+			isa = PBXGroup;
+			children = (
+				A4F0171A20D6B38600C6295C /* AppDelegate.h */,
+				A4F0171B20D6B38600C6295C /* AppDelegate.m */,
+				A4F0171D20D6B38600C6295C /* LoginViewController.h */,
+				A4F0171E20D6B38600C6295C /* LoginViewController.m */,
+				A4F0172020D6B38600C6295C /* Main.storyboard */,
+				A4F0172320D6B38700C6295C /* Assets.xcassets */,
+				A4F0172520D6B38700C6295C /* LaunchScreen.storyboard */,
+				A4F0172820D6B38700C6295C /* Info.plist */,
+				A4F0172920D6B38700C6295C /* main.m */,
+				A4F0173C20D6B99200C6295C /* BoxListViewController.h */,
+				A4F0173D20D6B99200C6295C /* BoxListViewController.m */,
+				A47E71E320E9294600616474 /* PlayLiveViewController.h */,
+				A47E71E420E9294600616474 /* PlayLiveViewController.m */,
+			);
+			path = FarmMonitor;
+			sourceTree = "<group>";
+		};
+		A4F0173020D6B5CA00C6295C /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				A46CB61820D75D3D003F2572 /* OC_Category */,
+				A4F0173120D6B5CA00C6295C /* Manager */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		A4F0173120D6B5CA00C6295C /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				A4F0173620D6B5CA00C6295C /* FFHttpTool.h */,
+				A4F0173320D6B5CA00C6295C /* FFHttpTool.m */,
+				A4F0173720D6B5CA00C6295C /* FarmGetManager.h */,
+				A4F0173420D6B5CA00C6295C /* FarmGetManager.m */,
+				A46CB61520D756EA003F2572 /* AccountManager.h */,
+				A46CB61620D756EA003F2572 /* AccountManager.m */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		A4F0173B20D6B70A00C6295C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A46CB61220D75512003F2572 /* BoxModel.h */,
+				A46CB61320D75512003F2572 /* BoxModel.m */,
+			);
+			name = Model;
+			path = FarmMonitor/Model;
+			sourceTree = "<group>";
+		};
+		A4F0173F20D6B9B500C6295C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A4F0174020D6B9D100C6295C /* BoxCell.h */,
+				A4F0174120D6B9D100C6295C /* BoxCell.m */,
+				A4F0174220D6B9D100C6295C /* BoxCell.xib */,
+			);
+			name = View;
+			path = FarmMonitor/View;
+			sourceTree = "<group>";
+		};
+		D29BFC3ADC7192F31B073022 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A1DDCA2D685F53673231DE1A /* Pods-FarmMonitor.debug.xcconfig */,
+				4F9BCBE0A4F453E53F66CA1B /* Pods-FarmMonitor.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		DC4E80C9CE9F3789BAC25EB2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4159328D397400E0E6066DB0 /* libPods-FarmMonitor.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A4F0171620D6B38500C6295C /* FarmMonitor */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A4F0172D20D6B38700C6295C /* Build configuration list for PBXNativeTarget "FarmMonitor" */;
+			buildPhases = (
+				C0E1E591099BD84027FF098F /* [CP] Check Pods Manifest.lock */,
+				A4F0171320D6B38500C6295C /* Sources */,
+				A4F0171420D6B38500C6295C /* Frameworks */,
+				A4F0171520D6B38500C6295C /* Resources */,
+				33E76C030C2ABDD64351A6CA /* [CP] Embed Pods Frameworks */,
+				8F48D52DAF3777CC12B233D6 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FarmMonitor;
+			productName = FarmMonitor;
+			productReference = A4F0171720D6B38500C6295C /* FarmMonitor.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A4F0170F20D6B38500C6295C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = farm;
+				TargetAttributes = {
+					A4F0171620D6B38500C6295C = {
+						CreatedOnToolsVersion = 9.4;
+					};
+				};
+			};
+			buildConfigurationList = A4F0171220D6B38500C6295C /* Build configuration list for PBXProject "FarmMonitor" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				"zh-Hans",
+			);
+			mainGroup = A4F0170E20D6B38500C6295C;
+			productRefGroup = A4F0171820D6B38500C6295C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A4F0171620D6B38500C6295C /* FarmMonitor */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A4F0171520D6B38500C6295C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A4F0172720D6B38700C6295C /* LaunchScreen.storyboard in Resources */,
+				A4F0174420D6B9D100C6295C /* BoxCell.xib in Resources */,
+				A46CB62B20D7A5BF003F2572 /* Localizable.strings in Resources */,
+				A4F0172420D6B38700C6295C /* Assets.xcassets in Resources */,
+				A4F0172220D6B38600C6295C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		33E76C030C2ABDD64351A6CA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-FarmMonitor/Pods-FarmMonitor-frameworks.sh",
+				"${PODS_ROOT}/PLPlayerKit/Pod/Library/PLPlayerKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PLPlayerKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FarmMonitor/Pods-FarmMonitor-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8F48D52DAF3777CC12B233D6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-FarmMonitor/Pods-FarmMonitor-resources.sh",
+				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FarmMonitor/Pods-FarmMonitor-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C0E1E591099BD84027FF098F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FarmMonitor-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A4F0171320D6B38500C6295C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A4F0173E20D6B99200C6295C /* BoxListViewController.m in Sources */,
+				A46CB61D20D75DAE003F2572 /* UIView+Common.m in Sources */,
+				A4F0173920D6B5CA00C6295C /* FFHttpTool.m in Sources */,
+				A4B1EF2120FCCCD10039AA91 /* PlayLiveViewModel.m in Sources */,
+				A4F0173A20D6B5CA00C6295C /* FarmGetManager.m in Sources */,
+				A46CB62820D7625D003F2572 /* LoginViewModel.m in Sources */,
+				A46CB63420D7AABF003F2572 /* UIColor+expanded.m in Sources */,
+				A46CB61E20D75DAE003F2572 /* NSString+Common.m in Sources */,
+				A4F0171F20D6B38600C6295C /* LoginViewController.m in Sources */,
+				A47E71E520E9294600616474 /* PlayLiveViewController.m in Sources */,
+				A4F0172A20D6B38700C6295C /* main.m in Sources */,
+				A4F0174320D6B9D100C6295C /* BoxCell.m in Sources */,
+				A46CB62120D75FFC003F2572 /* UITableView+Common.m in Sources */,
+				A46CB62420D7615D003F2572 /* UIViewController+HUD.m in Sources */,
+				A4F0171C20D6B38600C6295C /* AppDelegate.m in Sources */,
+				A46CB61420D75512003F2572 /* BoxModel.m in Sources */,
+				A46CB61720D756EA003F2572 /* AccountManager.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		A46CB62D20D7A5BF003F2572 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A46CB62C20D7A5BF003F2572 /* en */,
+				A46CB63120D7A61C003F2572 /* zh-Hans */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		A4F0172020D6B38600C6295C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A4F0172120D6B38600C6295C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A4F0172520D6B38700C6295C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A4F0172620D6B38700C6295C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A4F0172B20D6B38700C6295C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		A4F0172C20D6B38700C6295C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A4F0172E20D6B38700C6295C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A1DDCA2D685F53673231DE1A /* Pods-FarmMonitor.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = FarmMonitor/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = net.fram.FarmMonitor;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A4F0172F20D6B38700C6295C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4F9BCBE0A4F453E53F66CA1B /* Pods-FarmMonitor.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = FarmMonitor/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = net.fram.FarmMonitor;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A4F0171220D6B38500C6295C /* Build configuration list for PBXProject "FarmMonitor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A4F0172B20D6B38700C6295C /* Debug */,
+				A4F0172C20D6B38700C6295C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A4F0172D20D6B38700C6295C /* Build configuration list for PBXNativeTarget "FarmMonitor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A4F0172E20D6B38700C6295C /* Debug */,
+				A4F0172F20D6B38700C6295C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A4F0170F20D6B38500C6295C /* Project object */;
+}
