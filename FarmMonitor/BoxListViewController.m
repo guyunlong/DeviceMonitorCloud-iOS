@@ -18,6 +18,7 @@
 #import "UITableView+Common.h"
 #import "UIViewController+HUD.h"
 #import "NSString+Common.h"
+#import "PlayLiveViewController.h"
 @interface BoxListViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (strong, nonatomic) UITableView *myTableView;//
 @property (strong,nonatomic) NSArray * boxList;
@@ -106,7 +107,13 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    
    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    PlayLiveViewController *ctl =[PlayLiveViewController new];
+    PlayLiveViewModel * viewModel = [PlayLiveViewModel new];
+    [viewModel setModel:_boxList[indexPath.row]];
+    [ctl setViewModel:viewModel];
+    [self.navigationController pushViewController:ctl animated:YES];
 }
 
 

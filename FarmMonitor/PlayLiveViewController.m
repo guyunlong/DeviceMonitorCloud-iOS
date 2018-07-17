@@ -17,6 +17,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [_viewModel callVideo];
+    [self initPlayer];
 }
 
 -(void)initPlayer{
@@ -29,14 +31,17 @@
     [option setOptionValue:@(NO) forKey:PLPlayerOptionKeyVideoToolbox];
     [option setOptionValue:@(kPLLogInfo) forKey:PLPlayerOptionKeyLogLevel];
     
-    self.player = [PLPlayer playerWithURL:[NSURL URLWithString:self.rtmpUrl] option:option];
+    self.player = [PLPlayer playerWithURL:[NSURL URLWithString:[_viewModel getRtmpUrl]] option:option];
     
     // 设定代理 (optional)
     self.player.delegate = self;
     
+    [self.player.playerView setFrame:CGRectMake(0, 100, 300, 200)];
     [self.view addSubview:self.player.playerView];
-    
-    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+         [self.player play];
+    });
+   
     /*
      // 播放
      [self.player play];
@@ -77,6 +82,9 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+- (void)player:(nonnull PLPlayer *)player firstRender:(PLPlayerFirstRenderType)firstRenderType {
+   //音视频渲染首帧回调通知
 }
 
 /*

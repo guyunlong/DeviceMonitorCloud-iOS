@@ -13,4 +13,5 @@
 -(NSString*)getRtmpUrl;
 -(void)callVideo;
 -(void)heartbeat;
+-(void)setImdHeartBeat;
 @end
