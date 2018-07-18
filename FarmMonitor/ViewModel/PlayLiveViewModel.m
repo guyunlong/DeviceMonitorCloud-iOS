@@ -8,7 +8,14 @@
 
 #import "PlayLiveViewModel.h"
 #import "FFHttpTool.h"
+
+@interface PlayLiveViewModel()
+@property(nonatomic,strong)NSTimer * timer;
+@end
+
+
 @implementation PlayLiveViewModel
+
 -(NSString*)getRtmpUrl{
    // "rtmp://"+sip+":1935/live/"+bid;
     NSString * rtmpUrl = [NSString stringWithFormat:@"rtmp://%@:1935/live/%@",_model.sip,_model.bid];
@@ -50,9 +57,13 @@
     }];
 }
 -(void)startTimer{
-    [NSTimer scheduledTimerWithTimeInterval:4 repeats:YES block:^(NSTimer * _Nonnull timer) {
+    _timer = [NSTimer scheduledTimerWithTimeInterval:4 repeats:YES block:^(NSTimer * _Nonnull timer) {
         [self heartbeat];
     }];
+}
+-(void)stopTimer{
+    [_timer invalidate];
+    _timer = nil;
 }
 
 

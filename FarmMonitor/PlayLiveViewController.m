@@ -13,12 +13,20 @@
 @end
 
 @implementation PlayLiveViewController
-
+-(void)viewDidDisappear:(BOOL)animated{
+    [super viewDidDisappear:animated];
+    [_viewModel stopTimer];
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self.view setBackgroundColor:[UIColor blackColor]];
     // Do any additional setup after loading the view.
     [_viewModel callVideo];
     [self initPlayer];
+}
+-(void)loadView{
+    [super loadView];
+    [self setTitle:_viewModel.model.tit];
 }
 
 -(void)initPlayer{

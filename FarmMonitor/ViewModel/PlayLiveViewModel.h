@@ -14,4 +14,5 @@
 -(void)callVideo;
 -(void)heartbeat;
 -(void)setImdHeartBeat;
+-(void)stopTimer;
 @end
