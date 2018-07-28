@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		23CEBF63B320A887C96461E9 /* libPods-FarmMonitor.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4159328D397400E0E6066DB0 /* libPods-FarmMonitor.a */; };
+		A42F2F4A210CA9300099BDE0 /* LoginEditCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A42F2F48210CA9300099BDE0 /* LoginEditCell.m */; };
+		A42F2F4D210CB1290099BDE0 /* UIImage+Common.m in Sources */ = {isa = PBXBuildFile; fileRef = A42F2F4B210CB1290099BDE0 /* UIImage+Common.m */; };
 		A46CB61420D75512003F2572 /* BoxModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A46CB61320D75512003F2572 /* BoxModel.m */; };
 		A46CB61720D756EA003F2572 /* AccountManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A46CB61620D756EA003F2572 /* AccountManager.m */; };
 		A46CB61D20D75DAE003F2572 /* UIView+Common.m in Sources */ = {isa = PBXBuildFile; fileRef = A46CB61A20D75DAD003F2572 /* UIView+Common.m */; };
@@ -36,6 +38,11 @@
 		4159328D397400E0E6066DB0 /* libPods-FarmMonitor.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FarmMonitor.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F9BCBE0A4F453E53F66CA1B /* Pods-FarmMonitor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FarmMonitor.release.xcconfig"; path = "Pods/Target Support Files/Pods-FarmMonitor/Pods-FarmMonitor.release.xcconfig"; sourceTree = "<group>"; };
 		A1DDCA2D685F53673231DE1A /* Pods-FarmMonitor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FarmMonitor.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FarmMonitor/Pods-FarmMonitor.debug.xcconfig"; sourceTree = "<group>"; };
+		A42F2F47210C79EC0099BDE0 /* OCHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCHeader.h; sourceTree = "<group>"; };
+		A42F2F48210CA9300099BDE0 /* LoginEditCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginEditCell.m; sourceTree = "<group>"; };
+		A42F2F49210CA9300099BDE0 /* LoginEditCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginEditCell.h; sourceTree = "<group>"; };
+		A42F2F4B210CB1290099BDE0 /* UIImage+Common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Common.m"; sourceTree = "<group>"; };
+		A42F2F4C210CB1290099BDE0 /* UIImage+Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Common.h"; sourceTree = "<group>"; };
 		A46CB61220D75512003F2572 /* BoxModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BoxModel.h; sourceTree = "<group>"; };
 		A46CB61320D75512003F2572 /* BoxModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BoxModel.m; sourceTree = "<group>"; };
 		A46CB61520D756EA003F2572 /* AccountManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AccountManager.h; sourceTree = "<group>"; };
@@ -94,6 +101,7 @@
 		A46CB61820D75D3D003F2572 /* OC_Category */ = {
 			isa = PBXGroup;
 			children = (
+				A42F2F47210C79EC0099BDE0 /* OCHeader.h */,
 				A46CB63220D7AABF003F2572 /* UIColor+expanded.h */,
 				A46CB63320D7AABF003F2572 /* UIColor+expanded.m */,
 				A46CB62220D7615C003F2572 /* UIViewController+HUD.h */,
@@ -104,6 +112,8 @@
 				A46CB61A20D75DAD003F2572 /* UIView+Common.m */,
 				A46CB61F20D75FFB003F2572 /* UITableView+Common.h */,
 				A46CB62020D75FFB003F2572 /* UITableView+Common.m */,
+				A42F2F4C210CB1290099BDE0 /* UIImage+Common.h */,
+				A42F2F4B210CB1290099BDE0 /* UIImage+Common.m */,
 			);
 			path = OC_Category;
 			sourceTree = "<group>";
@@ -198,6 +208,8 @@
 		A4F0173F20D6B9B500C6295C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A42F2F49210CA9300099BDE0 /* LoginEditCell.h */,
+				A42F2F48210CA9300099BDE0 /* LoginEditCell.m */,
 				A4F0174020D6B9D100C6295C /* BoxCell.h */,
 				A4F0174120D6B9D100C6295C /* BoxCell.m */,
 				A4F0174220D6B9D100C6295C /* BoxCell.xib */,
@@ -363,8 +375,10 @@
 				A4F0173A20D6B5CA00C6295C /* FarmGetManager.m in Sources */,
 				A46CB62820D7625D003F2572 /* LoginViewModel.m in Sources */,
 				A46CB63420D7AABF003F2572 /* UIColor+expanded.m in Sources */,
+				A42F2F4D210CB1290099BDE0 /* UIImage+Common.m in Sources */,
 				A46CB61E20D75DAE003F2572 /* NSString+Common.m in Sources */,
 				A4F0171F20D6B38600C6295C /* LoginViewController.m in Sources */,
+				A42F2F4A210CA9300099BDE0 /* LoginEditCell.m in Sources */,
 				A47E71E520E9294600616474 /* PlayLiveViewController.m in Sources */,
 				A4F0172A20D6B38700C6295C /* main.m in Sources */,
 				A4F0174320D6B9D100C6295C /* BoxCell.m in Sources */,
@@ -537,7 +551,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = net.fram.FarmMonitor;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -559,7 +573,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = net.fram.FarmMonitor;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

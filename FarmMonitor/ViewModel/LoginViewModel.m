@@ -9,6 +9,7 @@
 #import "LoginViewModel.h"
 #import "FarmGetManager.h"
 #import "AccountManager.h"
+
 @implementation LoginViewModel
 
 - (id)init {
@@ -23,14 +24,16 @@
 -(void)initRacSignal{
    
     
-    self.validLoginSignal = [[RACSignal
+   
+    self.validLoginSignal = [RACSignal
                               combineLatest:@[ RACObserve(self, username), RACObserve(self, password) ]
                               reduce:^(NSString *username, NSString *password) {
                                   return @(username.length > 0 && password.length > 0);
                               }]
-                             distinctUntilChanged];
+                             ;
     
-   
+    [self setUsername:[AccountManager getUser]];
+    [self setPassword:[AccountManager getPwd]];
 }
 
 -(RACSignal *)racLogin{

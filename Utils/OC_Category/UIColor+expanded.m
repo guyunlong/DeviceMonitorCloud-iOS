@@ -1,4 +1,4 @@
-#import "UIColor+Expanded.h"
+#import "UIColor+expanded.h"
 
 /*
  
@@ -35,7 +35,7 @@ static NSMutableDictionary *colorNameCache = nil;
 #if SUPPORTS_UNDOCUMENTED_API
 // UIColor_Undocumented
 // Undocumented methods of UIColor
-@interface UIColor (UIColor_Undocumented)
+@interface UIColor (expanded)
 - (NSString *)styleString;
 @end
 #endif // SUPPORTS_UNDOCUMENTED_API
