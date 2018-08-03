@@ -14,8 +14,8 @@ typedef NS_ENUM(NSInteger, ControlPtzType)
      ControlPtzType_down,
     ControlPtzType_left,
     ControlPtzType_right,
-     ControlPtzType_zoom0,
-    ControlPtzType_zoom1
+     ControlPtzType_zoom0,//缩小
+    ControlPtzType_zoom1//放大
 };
 
 

@@ -103,24 +103,19 @@
      singleFingerOne.numberOfTapsRequired = 1; //tap次数
     // singleFingerOne.delegate = self;
     
-     [self.player.playerView addGestureRecognizer:singleFingerOne];
+   //  [self.player.playerView addGestureRecognizer:singleFingerOne];
     
     
     
 }
 
 -(void)initControlView{
-    if (!_exitBtn) {
-        _exitBtn = [[UIButton alloc] initWithFrame:CGRectMake(kScreenHeight-50, 10, 40, 40)];
-        [_exitBtn addTarget:self action:@selector(exitBtnClicked) forControlEvents:UIControlEventTouchUpInside];
-        [_exitBtn setImage:[UIImage imageNamed:@"icon_shut_down"] forState:UIControlStateNormal];
-        [self.view addSubview:_exitBtn];
-    }
+   
     if(!_bottomCtlView){
         _bottomCtlView = [[UIView alloc] initWithFrame:CGRectMake(0, kScreenWidth-50, kScreenHeight, 50)];
-      
+        [_bottomCtlView setUserInteractionEnabled:YES];
         [_bottomCtlView setBackgroundColor:[UIColor colorWithHexString:@"0x969696" andAlpha:0.7]];
-        [self.view addSubview:_exitBtn];
+        [self.view addSubview:_bottomCtlView];
     }
     CGFloat x = btnCtlHeight;
     _upBtn = [[UIButton alloc] initWithFrame:CGRectMake(x, bottomCtlHeight/2-btnCtlHeight/2, btnCtlHeight, btnCtlHeight)];
@@ -137,8 +132,31 @@
     
     _zoom0Btn = [[UIButton alloc] initWithFrame:CGRectMake(x, bottomCtlHeight/2-btnCtlHeight/2, btnCtlHeight, btnCtlHeight)];
       x += btnCtlHeight*2;
-    
     _zoom1Btn = [[UIButton alloc] initWithFrame:CGRectMake(x, bottomCtlHeight/2-btnCtlHeight/2, btnCtlHeight, btnCtlHeight)];
+    
+    
+    
+    if (!_exitBtn) {
+        _exitBtn = [[UIButton alloc] initWithFrame:CGRectMake(kScreenHeight-btnCtlHeight-btnCtlHeight, bottomCtlHeight/2-btnCtlHeight/2, btnCtlHeight, btnCtlHeight)];
+        [_exitBtn addTarget:self action:@selector(exitBtnClicked) forControlEvents:UIControlEventTouchUpInside];
+        [_exitBtn setImage:[UIImage imageNamed:@"exitbutton"] forState:UIControlStateNormal];
+        [_bottomCtlView addSubview:_exitBtn];
+    }
+    
+    
+    [_upBtn setBackgroundImage:[UIImage imageNamed:@"ptz_up_normal"] forState:UIControlStateNormal];
+    [_downBtn setBackgroundImage:[UIImage imageNamed:@"ptz_down_normal"] forState:UIControlStateNormal];
+    [_leftBtn setBackgroundImage:[UIImage imageNamed:@"ptz_left_normal"] forState:UIControlStateNormal];
+    [_rightBtn setBackgroundImage:[UIImage imageNamed:@"ptz_right_normal"] forState:UIControlStateNormal];
+    [_zoom0Btn setBackgroundImage:[UIImage imageNamed:@"ptz_zoom0_normal"] forState:UIControlStateNormal];
+    [_zoom1Btn setBackgroundImage:[UIImage imageNamed:@"ptz_zoom1_normal"] forState:UIControlStateNormal];
+    
+//    [_upBtn setImage:[UIImage imageNamed:@"ptz_up_press"] forState:UIControlStateHighlighted];
+//    [_downBtn setImage:[UIImage imageNamed:@"ptz_down_press"] forState:UIControlStateHighlighted];
+//    [_leftBtn setImage:[UIImage imageNamed:@"ptz_left_press"] forState:UIControlStateHighlighted];
+//    [_rightBtn setImage:[UIImage imageNamed:@"ptz_right_press"] forState:UIControlStateHighlighted];
+//    [_zoom0Btn setImage:[UIImage imageNamed:@"ptz_zoom0_press"] forState:UIControlStateHighlighted];
+//    [_zoom1Btn setImage:[UIImage imageNamed:@"ptz_zoom1_press"] forState:UIControlStateHighlighted];
     
     [_bottomCtlView addSubview:_upBtn];
     [_bottomCtlView addSubview:_downBtn];
@@ -146,22 +164,50 @@
     [_bottomCtlView addSubview:_rightBtn];
     [_bottomCtlView addSubview:_zoom0Btn];
     [_bottomCtlView addSubview:_zoom1Btn];
+    
+    [_upBtn addTarget:self action:@selector(controlPtzClicked:) forControlEvents:UIControlEventTouchUpInside];
+     [_downBtn addTarget:self action:@selector(controlPtzClicked:) forControlEvents:UIControlEventTouchUpInside];
+     [_leftBtn addTarget:self action:@selector(controlPtzClicked:) forControlEvents:UIControlEventTouchUpInside];
+     [_rightBtn addTarget:self action:@selector(controlPtzClicked:) forControlEvents:UIControlEventTouchUpInside];
+     [_zoom0Btn addTarget:self action:@selector(controlPtzClicked:) forControlEvents:UIControlEventTouchUpInside];
+     [_zoom1Btn addTarget:self action:@selector(controlPtzClicked:) forControlEvents:UIControlEventTouchUpInside];
 }
 
+-(void)controlPtzClicked:(id)sender{
+    if (sender == _upBtn) {
+        [_viewModel controlPtz:ControlPtzType_up];
+    }
+    else if(sender == _downBtn){
+        [_viewModel controlPtz:ControlPtzType_down];
+    }
+    else if(sender == _leftBtn){
+        [_viewModel controlPtz:ControlPtzType_left];
+    }
+    else if(sender == _rightBtn){
+        [_viewModel controlPtz:ControlPtzType_right];
+    }
+    else if(sender == _zoom0Btn){
+        //
+        [_viewModel controlPtz:ControlPtzType_zoom0];
+    }
+    else if(sender == _zoom1Btn){
+        [_viewModel controlPtz:ControlPtzType_zoom1];
+    }
+}
 //处理单指事件
 - (void)handleSingleFingerEvent:(UITapGestureRecognizer *)sender
 {
     if (sender.numberOfTapsRequired == 1) {
         CGRect originalframe = self.bottomCtlView.frame;
         
-        CGRect transframe;
-        if (frame.origin.y == kScreenWidth) {
+        CGRect transframe = originalframe;
+        if (originalframe.origin.y == kScreenWidth) {
             //弹出
-            transframe =CGRectMake(originalframe.origin.x, kScreenWidth-bottomCtlHeight, originalframe.size.width, originalframe.size.height)
+            transframe =CGRectMake(originalframe.origin.x, kScreenWidth-bottomCtlHeight, originalframe.size.width, originalframe.size.height);
         }
-        else if(frame.origin.y == kScreenWidth-bottomCtlHeight){
+        else if(originalframe.origin.y == kScreenWidth-bottomCtlHeight){
             //隐藏
-            transframe =CGRectMake(originalframe.origin.x, kScreenWidth, originalframe.size.width, originalframe.size.height)
+            transframe =CGRectMake(originalframe.origin.x, kScreenWidth, originalframe.size.width, originalframe.size.height);
         }
         
         [UIView animateWithDuration:0.5 animations:^{

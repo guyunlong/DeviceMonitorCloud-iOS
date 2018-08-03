@@ -107,8 +107,14 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    BoxModel*model = _boxList[indexPath.row];
+    if (!model.ste) {
+        [self showHint:@"设备离线，无法观看视频"];
+        return;
+    }
     
-   [tableView deselectRowAtIndexPath:indexPath animated:YES];
+  
     PlayLiveViewController *ctl =[PlayLiveViewController new];
     PlayLiveViewModel * viewModel = [PlayLiveViewModel new];
     [viewModel setModel:_boxList[indexPath.row]];

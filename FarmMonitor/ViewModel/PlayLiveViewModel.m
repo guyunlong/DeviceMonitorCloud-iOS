@@ -68,4 +68,40 @@
 
 
 
+-(void)controlPtz:(ControlPtzType)PtzType{
+    int type = 0;
+    switch (PtzType) {
+        case ControlPtzType_up:
+            type = 1;
+            break;
+        case ControlPtzType_down:
+            type = 2;
+            break;
+        case ControlPtzType_left:
+            type = 3;
+            break;
+        case ControlPtzType_right:
+            type = 4;
+            break;
+        case ControlPtzType_zoom1:
+            type = 5;//放大
+            break;
+        case ControlPtzType_zoom0:
+            type = 6;//缩小
+            break;
+        default:
+            break;
+    }
+    
+    //url="http://"+sip+":1936/svr.php?act=cts&bid="+bid+"&pm1=2&pm2="+(type*100+2);
+    NSString * url = [NSString stringWithFormat:@"http://%@:1936/svr.php?act=cts&bid=%@&pm1=2&pm2=%d",_model.sip,_model.bid,type];
+    [FFHttpTool GET:url parameters:nil success:^(id succss) {
+        
+        NSLog(@"success ,ret is %@",succss);
+    } failure:^(NSError * error) {
+        NSLog(@"error is %@",error.localizedDescription);
+        
+    }];
+}
+
 @end
