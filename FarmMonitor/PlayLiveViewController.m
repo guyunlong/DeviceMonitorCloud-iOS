@@ -9,9 +9,18 @@
 #import "PlayLiveViewController.h"
 #import <PLPlayerKit/PLPlayerKit.h>
 #import "OCHeader.h"
+#define bottomCtlHeight 50
+#define btnCtlHeight 40
 @interface PlayLiveViewController ()<PLPlayerDelegate>
 @property(nonatomic,strong)PLPlayer * player;
 @property(nonatomic,strong)UIButton * exitBtn;
+@property(nonatomic,strong)UIView * bottomCtlView;
+@property(nonatomic,strong)UIButton * upBtn;
+@property(nonatomic,strong)UIButton * downBtn;
+@property(nonatomic,strong)UIButton * leftBtn;
+@property(nonatomic,strong)UIButton * rightBtn;
+@property(nonatomic,strong)UIButton * zoom0Btn;
+@property(nonatomic,strong)UIButton * zoom1Btn;
 @end
 
 @implementation PlayLiveViewController
@@ -88,6 +97,16 @@
      [self.player resume];
      */
     
+    UITapGestureRecognizer *singleFingerOne = [[UITapGestureRecognizer alloc] initWithTarget:self
+                                              action:@selector(handleSingleFingerEvent:)];
+   singleFingerOne.numberOfTouchesRequired = 1; //手指数
+     singleFingerOne.numberOfTapsRequired = 1; //tap次数
+    // singleFingerOne.delegate = self;
+    
+     [self.player.playerView addGestureRecognizer:singleFingerOne];
+    
+    
+    
 }
 
 -(void)initControlView{
@@ -97,7 +116,73 @@
         [_exitBtn setImage:[UIImage imageNamed:@"icon_shut_down"] forState:UIControlStateNormal];
         [self.view addSubview:_exitBtn];
     }
+    if(!_bottomCtlView){
+        _bottomCtlView = [[UIView alloc] initWithFrame:CGRectMake(0, kScreenWidth-50, kScreenHeight, 50)];
+      
+        [_bottomCtlView setBackgroundColor:[UIColor colorWithHexString:@"0x969696" andAlpha:0.7]];
+        [self.view addSubview:_exitBtn];
+    }
+    CGFloat x = btnCtlHeight;
+    _upBtn = [[UIButton alloc] initWithFrame:CGRectMake(x, bottomCtlHeight/2-btnCtlHeight/2, btnCtlHeight, btnCtlHeight)];
+    x += btnCtlHeight*2;
+    
+    _downBtn = [[UIButton alloc] initWithFrame:CGRectMake(x, bottomCtlHeight/2-btnCtlHeight/2, btnCtlHeight, btnCtlHeight)];
+      x += btnCtlHeight*2;
+    
+    _leftBtn = [[UIButton alloc] initWithFrame:CGRectMake(x, bottomCtlHeight/2-btnCtlHeight/2, btnCtlHeight, btnCtlHeight)];
+      x += btnCtlHeight*2;
+    
+    _rightBtn = [[UIButton alloc] initWithFrame:CGRectMake(x, bottomCtlHeight/2-btnCtlHeight/2, btnCtlHeight, btnCtlHeight)];
+      x += btnCtlHeight*2;
+    
+    _zoom0Btn = [[UIButton alloc] initWithFrame:CGRectMake(x, bottomCtlHeight/2-btnCtlHeight/2, btnCtlHeight, btnCtlHeight)];
+      x += btnCtlHeight*2;
+    
+    _zoom1Btn = [[UIButton alloc] initWithFrame:CGRectMake(x, bottomCtlHeight/2-btnCtlHeight/2, btnCtlHeight, btnCtlHeight)];
+    
+    [_bottomCtlView addSubview:_upBtn];
+    [_bottomCtlView addSubview:_downBtn];
+    [_bottomCtlView addSubview:_leftBtn];
+    [_bottomCtlView addSubview:_rightBtn];
+    [_bottomCtlView addSubview:_zoom0Btn];
+    [_bottomCtlView addSubview:_zoom1Btn];
 }
+
+//处理单指事件
+- (void)handleSingleFingerEvent:(UITapGestureRecognizer *)sender
+{
+    if (sender.numberOfTapsRequired == 1) {
+        CGRect originalframe = self.bottomCtlView.frame;
+        
+        CGRect transframe;
+        if (frame.origin.y == kScreenWidth) {
+            //弹出
+            transframe =CGRectMake(originalframe.origin.x, kScreenWidth-bottomCtlHeight, originalframe.size.width, originalframe.size.height)
+        }
+        else if(frame.origin.y == kScreenWidth-bottomCtlHeight){
+            //隐藏
+            transframe =CGRectMake(originalframe.origin.x, kScreenWidth, originalframe.size.width, originalframe.size.height)
+        }
+        
+        [UIView animateWithDuration:0.5 animations:^{
+            
+            self.bottomCtlView.frame = transframe;
+            
+        } completion:^(BOOL finished){
+            
+            
+            
+        }];
+        
+        
+    }else if(sender.numberOfTapsRequired == 2){
+        //单指双击
+        NSLog(@"单指双击");
+    }
+}
+
+
+
 -(void)exitBtnClicked{
     [self.player stop];
     [self.navigationController popViewControllerAnimated:YES];
