@@ -72,7 +72,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self.view setBackgroundColor:[UIColor whiteColor]];
-    [self.navigationItem setTitle:@"boxlist".localizedString];
+    [self.navigationItem setTitle:@"设备列表".localizedString];
     [self showHudInView:self.view hint:@""];
     [self refreshBoxList];
 }

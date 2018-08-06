@@ -9,8 +9,8 @@
 #import "PlayLiveViewController.h"
 #import <PLPlayerKit/PLPlayerKit.h>
 #import "OCHeader.h"
-#define bottomCtlHeight 50
-#define btnCtlHeight 40
+#define bottomCtlHeight 60
+#define btnCtlHeight 50
 @interface PlayLiveViewController ()<PLPlayerDelegate>
 @property(nonatomic,strong)PLPlayer * player;
 @property(nonatomic,strong)UIButton * exitBtn;
@@ -44,7 +44,7 @@
     [self initPlayer];
     [self initControlView];
     
-    [self showHudInView:self.view hint:nil];
+  [self showHudInView:self.view hint:nil];
     
     
 }
@@ -103,7 +103,7 @@
      singleFingerOne.numberOfTapsRequired = 1; //tap次数
     // singleFingerOne.delegate = self;
     
-   //  [self.player.playerView addGestureRecognizer:singleFingerOne];
+    [self.player.playerView addGestureRecognizer:singleFingerOne];
     
     
     
@@ -112,26 +112,26 @@
 -(void)initControlView{
    
     if(!_bottomCtlView){
-        _bottomCtlView = [[UIView alloc] initWithFrame:CGRectMake(0, kScreenWidth-50, kScreenHeight, 50)];
+        _bottomCtlView = [[UIView alloc] initWithFrame:CGRectMake(0, kScreenWidth-bottomCtlHeight, kScreenHeight, bottomCtlHeight)];
         [_bottomCtlView setUserInteractionEnabled:YES];
         [_bottomCtlView setBackgroundColor:[UIColor colorWithHexString:@"0x969696" andAlpha:0.7]];
         [self.view addSubview:_bottomCtlView];
     }
     CGFloat x = btnCtlHeight;
     _upBtn = [[UIButton alloc] initWithFrame:CGRectMake(x, bottomCtlHeight/2-btnCtlHeight/2, btnCtlHeight, btnCtlHeight)];
-    x += btnCtlHeight*2;
+    x += btnCtlHeight*1.5;
     
     _downBtn = [[UIButton alloc] initWithFrame:CGRectMake(x, bottomCtlHeight/2-btnCtlHeight/2, btnCtlHeight, btnCtlHeight)];
-      x += btnCtlHeight*2;
+      x += btnCtlHeight*1.5;
     
     _leftBtn = [[UIButton alloc] initWithFrame:CGRectMake(x, bottomCtlHeight/2-btnCtlHeight/2, btnCtlHeight, btnCtlHeight)];
-      x += btnCtlHeight*2;
+      x += btnCtlHeight*1.5;
     
     _rightBtn = [[UIButton alloc] initWithFrame:CGRectMake(x, bottomCtlHeight/2-btnCtlHeight/2, btnCtlHeight, btnCtlHeight)];
-      x += btnCtlHeight*2;
+      x += btnCtlHeight*1.5;
     
     _zoom0Btn = [[UIButton alloc] initWithFrame:CGRectMake(x, bottomCtlHeight/2-btnCtlHeight/2, btnCtlHeight, btnCtlHeight)];
-      x += btnCtlHeight*2;
+      x += btnCtlHeight*1.5;
     _zoom1Btn = [[UIButton alloc] initWithFrame:CGRectMake(x, bottomCtlHeight/2-btnCtlHeight/2, btnCtlHeight, btnCtlHeight)];
     
     
