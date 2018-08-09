@@ -165,14 +165,23 @@
     [_bottomCtlView addSubview:_zoom0Btn];
     [_bottomCtlView addSubview:_zoom1Btn];
     
-    [_upBtn addTarget:self action:@selector(controlPtzClicked:) forControlEvents:UIControlEventTouchUpInside];
-     [_downBtn addTarget:self action:@selector(controlPtzClicked:) forControlEvents:UIControlEventTouchUpInside];
-     [_leftBtn addTarget:self action:@selector(controlPtzClicked:) forControlEvents:UIControlEventTouchUpInside];
-     [_rightBtn addTarget:self action:@selector(controlPtzClicked:) forControlEvents:UIControlEventTouchUpInside];
-     [_zoom0Btn addTarget:self action:@selector(controlPtzClicked:) forControlEvents:UIControlEventTouchUpInside];
-     [_zoom1Btn addTarget:self action:@selector(controlPtzClicked:) forControlEvents:UIControlEventTouchUpInside];
+    [_upBtn addTarget:self action:@selector(controlPtzClicked:) forControlEvents:UIControlEventTouchDown];
+     [_downBtn addTarget:self action:@selector(controlPtzClicked:) forControlEvents:UIControlEventTouchDown];
+     [_leftBtn addTarget:self action:@selector(controlPtzClicked:) forControlEvents:UIControlEventTouchDown];
+     [_rightBtn addTarget:self action:@selector(controlPtzClicked:) forControlEvents:UIControlEventTouchDown];
+     [_zoom0Btn addTarget:self action:@selector(controlPtzClicked:) forControlEvents:UIControlEventTouchDown];
+     [_zoom1Btn addTarget:self action:@selector(controlPtzClicked:) forControlEvents:UIControlEventTouchDown];
+    
+    [_upBtn addTarget:self action:@selector(controlStopPtzClicked:) forControlEvents:UIControlEventTouchUpInside];
+    [_downBtn addTarget:self action:@selector(controlStopPtzClicked:) forControlEvents:UIControlEventTouchUpInside];
+    [_leftBtn addTarget:self action:@selector(controlStopPtzClicked:) forControlEvents:UIControlEventTouchUpInside];
+    [_rightBtn addTarget:self action:@selector(controlStopPtzClicked:) forControlEvents:UIControlEventTouchUpInside];
+    [_zoom0Btn addTarget:self action:@selector(controlStopPtzClicked:) forControlEvents:UIControlEventTouchUpInside];
+    [_zoom1Btn addTarget:self action:@selector(controlStopPtzClicked:) forControlEvents:UIControlEventTouchUpInside];
 }
-
+-(void)controlStopPtzClicked:(id)sender{
+     [_viewModel controlPtz:ControlPtzType_stop];
+}
 -(void)controlPtzClicked:(id)sender{
     if (sender == _upBtn) {
         [_viewModel controlPtz:ControlPtzType_up];

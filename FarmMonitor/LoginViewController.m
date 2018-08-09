@@ -142,6 +142,7 @@
         @strongify(self)
         if ([x integerValue] == 1) {
             //登录成功
+            [self hideHud];
             BoxListViewController * ctl = [BoxListViewController new];
             UINavigationController * nav = [[UINavigationController alloc] initWithRootViewController:ctl];
             [self presentViewController:nav animated:TRUE completion:nil];
@@ -150,6 +151,7 @@
         }
         else{
             //显示错误码
+            [self hideHud];
             [self showHint:[NSString stringWithFormat:@"%@,error code is %@",@"loginerror".localizedString,x]];
         }
     }];

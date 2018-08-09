@@ -11,6 +11,7 @@
 
 @interface PlayLiveViewModel()
 @property(nonatomic,strong)NSTimer * timer;
+
 @end
 
 
@@ -89,12 +90,22 @@
         case ControlPtzType_zoom0:
             type = 6;//缩小
             break;
+        case ControlPtzType_stop:
+            type = 0;//停止
+            break;
         default:
             break;
     }
     
     //url="http://"+sip+":1936/svr.php?act=cts&bid="+bid+"&pm1=2&pm2="+(type*100+2);
-    NSString * url = [NSString stringWithFormat:@"http://%@:1936/svr.php?act=cts&bid=%@&pm1=2&pm2=%d",_model.sip,_model.bid,type];
+    NSString * url;
+    if (type != 0) {
+       url  = [NSString stringWithFormat:@"http://%@:1936/svr.php?act=cts&bid=%@&pm1=2&pm2=%d",_model.sip,_model.bid,type*100+2];
+    }
+    else{
+        url  = [NSString stringWithFormat:@"http://%@:1936/svr.php?act=cts&bid=%@&pm1=2&pm2=0",_model.sip,_model.bid];
+    }
+    
     [FFHttpTool GET:url parameters:nil success:^(id succss) {
         
         NSLog(@"success ,ret is %@",succss);
